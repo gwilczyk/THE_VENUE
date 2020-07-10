@@ -8,19 +8,30 @@ import IconButton from '@material-ui/core/IconButton';
 
 class Header extends Component {
   state = {
-    isDrawerOpen: false
+    isDrawerOpen: false,
+    doesHeaderShow: false
   };
 
   toggleDrawer = value => {
     this.setState({ isDrawerOpen: value });
   };
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  handleScroll = () =>
+    window.scrollY > 0
+      ? this.setState({ doesHeaderShow: true })
+      : this.setState({ doesHeaderShow: false });
+
   render() {
     return (
       <AppBar
         position='fixed'
         style={{
-          backgroundColor: '#2f2f2f',
+          backgroundColor: this.state.doesHeaderShow
+            ? '#2f2f2f'
+            : 'transparent',
           boxShadow: 'none',
           padding: '10px 0px'
         }}
