@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/header_footer/Header';
+import Featured from './components/featured/Featured';
 import './resources/styles.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
         style={{ height: '1500px', background: 'cornflowerblue' }}
       >
         <Header />
+        <Featured />
       </div>
     );
   }
