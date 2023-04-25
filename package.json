@@ -44,5 +44,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-syntax-flow": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@svgr/core": "^7.0.0",
+    "@svgr/plugin-svgo": "^7.0.0",
+    "@testing-library/dom": "^9.2.0",
+    "typescript": "^5.0.4"
   }
 }
